@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Buttons that activate Giphies</title>
+</head>
+
+<body>
+ // var movieNames = [  , , , , ,    , , , , ]; 
+ // for  
+  <button id="">Buttons array [] </button>
+  <div id="images">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // Event listener for our movie-Names
+    $("#movieNames-button").on("click", function() {
+
+      // Storing our giphy API URL for 10 random movie images
+      var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=hQjQiJo1bMw74PhEx7QAe3b3Mf5LMvQP&tag=movieNames&limit=10"; // 
+
+      // Perfoming an AJAX GET request to our queryURL
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+
+      // After the data from the AJAX request comes back
+      .done(function(response) {
+
+        // Saving the image_original_url property
+        var imageUrl = response.data.image_original_url[];
+
+        // Creating and storing an image tag
+        var movieImage = $("<img>");
+        
+        // Setting the catImage src attribute to imageUrl arrays 
+        movieImage.attr("src", imageUrl);
+        movieImage.attr("alt", "movieImage");
+
+        // Prepending the catImage to the images div
+        $("#images").prepend(movieImage);
+        
+        $("#movieNames-button").on("click", function() { 
+
+         // animate, or pause 
+         //  toggle upon clicks 
+        
+       Construct a User Input  data collector 
+       Box and Submit or search button upon entering 
+       Assign that movie-Name to the movie_name array above
+       add buttons with that movie_names
+
+      });
+    });
+  </script>
+</body>
+
+</html>
